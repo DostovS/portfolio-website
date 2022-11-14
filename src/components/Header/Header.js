@@ -1,41 +1,32 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.scss';
-import { Link } from 'react-router-dom';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-export default function Header({toggleClass, toggle}) {
+
+function Header() {
   return (
     <header>
-      <div className="container">
-          <div className="logo">
-          <h2>SOHIBJON.UZ</h2>
+      <div className="container flex">
+        <div className="site-logo">
+          <h1>Sohibjon</h1>
         </div>
         <nav>
-          <ul>
-            <Link to='/about'>
-              About
-            </Link>
-            <Link to='/blog'>
-              Blog
-            </Link>
-            <Link to='/contact'>
-              Contact
-            </Link>
-          </ul>
-        </nav>
-        <i 
-              onClick={toggleClass}>
-              {toggle ? (
-                <WbSunnyIcon />
-              ) : <Brightness4Icon />}
-            </i>
-        <div className="hamburger">
-          <div className="line"></div>
-          <div className="line"></div>
-          <div className="line"></div>
-        </div>
+          <NavLink to=''>
+            Home
+          </NavLink>
+          <NavLink to='/about'>
+            About
+          </NavLink>
+          <NavLink to='/portfolio'>
+            Portfolio
+          </NavLink>
+          <NavLink to='/blog'>
+            Blog
+          </NavLink>
+        </nav>        
       </div>
       
     </header>
-  )
+  );
 }
+
+export default Header;
