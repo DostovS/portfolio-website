@@ -6,17 +6,17 @@ main {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: 'Nunito', sans-serif;
   .home-content {
     width: 50%;
-    .tagline {
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      padding: 8px 10px;
-      background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      font-size: 20px;
-      margin-bottom: 16px;
-      display: inline-block;
+    h1 {
+      font-size: 40px;
+      margin: 0;
+
+    }
+    p {
+      font-size: 30px;      
+      margin: 0;
     }
   }
   .home-img {
@@ -37,5 +37,13 @@ main {
   }
   100% {
       transform: translateY(-15px);
+  }
+}
+@media only screen and (max-width: 900px) {
+  main {
+    .flex {
+      justify-content: center;
+      flex-direction: column;
+    }
   }
 }

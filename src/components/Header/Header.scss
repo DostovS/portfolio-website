@@ -4,12 +4,49 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid red;
+  .site-logo {
+    cursor: pointer;
+    a {
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  }
   nav {
     a {
+      font-weight: 500;
       margin-right: 1rem;
+      transition: .2s ease;
       &:last-child {
         margin-right: 0;
       }
+      &:hover {
+        color: red;
+      }
+      &:focus {
+        color: #46A358;
+      }
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+    display: none;
+    .line {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background-color: #fff;
+    }
+    &:active .line:nth-child(1){
+      transform: rotateX(45deg);
+    }
+    &:active .line:nth-child(2){
+      visibility: hidden;
+    }
+    &:active .line:nth-child(3){
+      transform: rotateY(45deg);
     }
   }
 }
